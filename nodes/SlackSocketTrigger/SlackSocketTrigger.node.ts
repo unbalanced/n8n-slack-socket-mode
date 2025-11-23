@@ -65,7 +65,7 @@ export class SlackSocketTrigger implements INodeType {
 				{
 					name: 'App Rate Limited',
 					value: 'app_rate_limited',
-					description: 'When your app\'s event subscriptions are being rate limited',
+					description: 'When your app's event subscriptions are being rate limited',
 				},
 				{
 					name: 'App Requested',
@@ -130,7 +130,7 @@ export class SlackSocketTrigger implements INodeType {
 				{
 					name: 'Channel History Changed',
 					value: 'channel_history_changed',
-					description: 'When bulk updates were made to a channel\'s history',
+					description: 'When bulk updates were made to a channel's history',
 				},
 				{
 					name: 'Channel ID Changed',
@@ -285,7 +285,7 @@ export class SlackSocketTrigger implements INodeType {
 				{
 					name: 'Group History Changed',
 					value: 'group_history_changed',
-					description: 'When bulk updates were made to a private channel\'s history',
+					description: 'When bulk updates were made to a private channel's history',
 				},
 				{
 					name: 'Group Joined',
@@ -335,7 +335,7 @@ export class SlackSocketTrigger implements INodeType {
 				{
 					name: 'IM History Changed',
 					value: 'im_history_changed',
-					description: 'When bulk updates were made to a DM\'s history',
+					description: 'When bulk updates were made to a DM's history',
 				},
 				{
 					name: 'IM Marked',
@@ -350,7 +350,7 @@ export class SlackSocketTrigger implements INodeType {
 				{
 					name: 'Invite Requested',
 					value: 'invite_requested',
-					description: 'When a user requested an invite',
+					description: 'User requested an invite',
 				},
 				{
 					name: 'Link Shared',
@@ -435,7 +435,7 @@ export class SlackSocketTrigger implements INodeType {
 				{
 					name: 'Presence Change',
 					value: 'presence_change',
-					description: 'When a member\'s presence changed',
+					description: 'When a member's presence changed',
 				},
 				{
 					name: 'Reaction Added',
@@ -525,22 +525,22 @@ export class SlackSocketTrigger implements INodeType {
 				{
 					name: 'Subteam Updated',
 					value: 'subteam_updated',
-					description: 'When an existing User Group has been updated or its members changed',
+					description: 'An existing User Group has been updated or its members changed',
 				},
 				{
 					name: 'Team Access Granted',
 					value: 'team_access_granted',
-					description: 'When access to a set of teams was granted to your org app',
+					description: 'Access to a set of teams was granted for your org app',
 				},
 				{
 					name: 'Team Access Revoked',
 					value: 'team_access_revoked',
-					description: 'When access to a set of teams was revoked from your org app',
+					description: 'Access to a set of teams was revoked from your org app',
 				},
 				{
 					name: 'Team Domain Change',
 					value: 'team_domain_change',
-					description: 'When the workspace domain has changed',
+					description: 'The workspace domain has changed',
 				},
 				{
 					name: 'Team Join',
@@ -550,37 +550,37 @@ export class SlackSocketTrigger implements INodeType {
 				{
 					name: 'Team Plan Change',
 					value: 'team_plan_change',
-					description: 'When the account billing plan has changed',
+					description: 'The account billing plan has changed',
 				},
 				{
 					name: 'Team Pref Change',
 					value: 'team_pref_change',
-					description: 'When a preference has been updated',
+					description: 'A preference has been updated',
 				},
 				{
 					name: 'Team Profile Change',
 					value: 'team_profile_change',
-					description: 'When the workspace profile fields have been updated',
+					description: 'The workspace profile fields have been updated',
 				},
 				{
 					name: 'Team Profile Delete',
 					value: 'team_profile_delete',
-					description: 'When the workspace profile fields have been deleted',
+					description: 'The workspace profile fields have been deleted',
 				},
 				{
 					name: 'Team Profile Reorder',
 					value: 'team_profile_reorder',
-					description: 'When the workspace profile fields have been reordered',
+					description: 'The workspace profile fields have been reordered',
 				},
 				{
 					name: 'Team Rename',
 					value: 'team_rename',
-					description: 'When the workspace name has changed',
+					description: 'The workspace name has changed',
 				},
 				{
 					name: 'Tokens Revoked',
 					value: 'tokens_revoked',
-					description: 'When API tokens for your app were revoked',
+					description: 'API tokens for your app were revoked',
 				},
 				{
 					name: 'URL Verification',
@@ -590,7 +590,7 @@ export class SlackSocketTrigger implements INodeType {
 				{
 					name: 'User Change',
 					value: 'user_change',
-					description: 'When a member\'s data has changed',
+					description: 'When a member's data has changed',
 				},
 				{
 					name: 'User Resource Denied',
@@ -611,6 +611,16 @@ export class SlackSocketTrigger implements INodeType {
 					name: 'User Typing',
 					value: 'user_typing',
 					description: 'When a channel member is typing a message',
+				},
+				{
+					name: 'View Submitted',
+					value: 'view_submission',
+					description: 'When a modal view is submitted (contains submitted values)',
+				},
+				{
+					name: 'View Closed',
+					value: 'view_closed',
+					description: 'When a modal view is closed (contains view details and private_metadata)',
 				},
 				{
 					name: 'Workflow Deleted',
@@ -636,8 +646,8 @@ export class SlackSocketTrigger implements INodeType {
 					name: 'Workflow Unpublished',
 					value: 'workflow_unpublished',
 					description: 'When a workflow that contains a step supported by your app was unpublished',
-				},],
-				default: [],
+				},
+				],
 			},
 			{
 				displayName: 'Regex Pattern',
@@ -663,7 +673,7 @@ export class SlackSocketTrigger implements INodeType {
 				type: 'fixedCollection',
 				default: {},
 				placeholder: 'Add Channel',
-				description: 'Select channels to filter events. If specified, only events from these channels will trigger the workflow. To enter IDs manually, add each channel separately (e.g., C1234567890, G1234567890).',
+				description: 'Select channels to filter events. If specified, only events from these channels will trigger the workflow. To enter IDs manually, add each channel separately (e.g., C1234567890, G123[...]',
 				typeOptions: {
 					multipleValues: true,
 					multipleValueButtonText: 'Add Channel',
@@ -681,61 +691,60 @@ export class SlackSocketTrigger implements INodeType {
 								placeholder: 'Select a channel',
 								description: 'Channel to watch for events',
 								modes: [
+								{
+									displayName: 'From List',
+									name: 'list',
+									type: 'list',
+									placeholder: 'Select a channel',
+									typeOptions: {
+									searchListMethod: 'channelSearch',
+									searchable: true,
+								},
+								},
+								{
+									displayName: 'By ID',
+									name: 'id',
+									type: 'string',
+									placeholder: 'C1234567890',
+									validation: [
 									{
-										displayName: 'From List',
-										name: 'list',
-										type: 'list',
-										placeholder: 'Select a channel',
-										typeOptions: {
-											searchListMethod: 'channelSearch',
-											searchable: true,
-										},
+										type: 'regex',
+									properties: {
+										regex: '^[C|G|D][A-Z0-9]{8,}$',
+										errorMessage: 'Not a valid Slack channel ID',
 									},
-									{
-										displayName: 'By ID',
-										name: 'id',
-										type: 'string',
-										placeholder: 'C1234567890',
-										validation: [
-											{
-												type: 'regex',
-												properties: {
-													regex: '^[C|G|D][A-Z0-9]{8,}$',
-													errorMessage: 'Not a valid Slack channel ID',
-												},
-											},
-										],
-									},
+								},
+								],
+								},
 								],
 							},
 						],
 					},
 				],
-			},
-			{
-				displayName: 'Legacy Channel to Watch',
-				name: 'channelToWatch',
-				type: 'resourceLocator',
-				default: { mode: 'list', value: '' },
-				placeholder: 'Select a channel',
-				description: 'Legacy single-channel selector retained for workflows created before version 1.4.0',
-				modes: [
-					{
-						displayName: 'From List',
-						name: 'list',
-						type: 'list',
-						placeholder: 'Select a channel',
-						typeOptions: {
+				{
+					displayName: 'Legacy Channel to Watch',
+					name: 'channelToWatch',
+					type: 'resourceLocator',
+					default: { mode: 'list', value: '' },
+					placeholder: 'Select a channel',
+					description: 'Legacy single-channel selector retained for workflows created before version 1.4.0',
+					modes: [
+						{
+							displayName: 'From List',
+							name: 'list',
+							type: 'list',
+							placeholder: 'Select a channel',
+							typeOptions: {
 							searchListMethod: 'channelSearch',
 							searchable: true,
 						},
-					},
-					{
-						displayName: 'By ID',
-						name: 'id',
-						type: 'string',
-						placeholder: 'C1234567890',
-						validation: [
+						},
+						{
+							displayName: 'By ID',
+							name: 'id',
+							type: 'string',
+							placeholder: 'C1234567890',
+							validation: [
 							{
 								type: 'regex',
 								properties: {
@@ -743,12 +752,12 @@ export class SlackSocketTrigger implements INodeType {
 									errorMessage: 'Not a valid Slack channel ID',
 								},
 							},
+							],
+						},
 						],
 					},
-				],
-			},
-		],
-	};
+					],
+			};
 
 	methods = {
 		listSearch: {
@@ -798,8 +807,7 @@ export class SlackSocketTrigger implements INodeType {
 		const pattern = this.getNodeParameter('regexPattern') as string;
 		const flags = this.getNodeParameter('regexFlags') as string;
 		const channelsToWatch = this.getNodeParameter('channelsToWatch', {}) as {
-			channelValues?: Array<{ channel?: { mode?: string; value?: string } }>;
-		};
+			channelValues?: Array<{ channel?: { mode?: string; value?: string } }>;};
 		const legacyChannelToWatch = this.getNodeParameter('channelToWatch', null) as
 			| { mode?: string; value?: string }
 			| null;
@@ -866,8 +874,11 @@ export class SlackSocketTrigger implements INodeType {
 
 		const socketProcess = async (root: any) => {
 			try {
-				const { body, payload, context, event } = root;
+				// root can contain many keys depending on the interaction: body, payload, context, event, view, etc.
+				// include all non-function keys so view_submission/view_closed payloads are emitted with their view data
+				const event = root?.event;
 
+				// channel filtering for events that have an 'event' object
 				if (uniqueChannelIds.length > 0 && event) {
 					const eventChannelId = getEventChannelId(event);
 					if (eventChannelId && !uniqueChannelIds.includes(eventChannelId)) {
@@ -875,12 +886,20 @@ export class SlackSocketTrigger implements INodeType {
 					}
 				}
 
-				let result: IDataObject = { body, payload, context, event };
-				this.emit([this.helpers.returnJsonArray(result)]);
+				const sanitized: IDataObject = {};
+				for (const key of Object.keys(root)) {
+					const val = root[key];
+					// do not include functions (ack, respond, etc.) as they are not serializable and not useful in the output
+					if (typeof val !== 'function') {
+						sanitized[key] = val as any;
+					}
+				}
+
+				this.emit([this.helpers.returnJsonArray(sanitized)]);
 			} catch (error) {
 				this.logger.error('Error processing Slack Socket event: ' + error);
 			}
-		}
+		};
 
 		const setupEventListeners = () => {
 			filters.forEach((filter) => {
@@ -907,9 +926,47 @@ export class SlackSocketTrigger implements INodeType {
 					} else if (filter === 'block_actions') {
 						app.action(/.*/, async (args: any) => {
 							const { ack } = args;
-							await ack();
+							// acknowledge block action if available
+							if (typeof ack === 'function') {
+								await ack();
+							}
 							await socketProcess(args);
-						});;
+						});
+					} else if (filter === 'view_submission') {
+						// listen to any view submission (callback_id matching all) and ack if possible
+						app.view(/.*/, async (args: any) => {
+							try {
+								if (typeof args.ack === 'function') {
+									// acknowledge the view submission so Slack knows we've received it
+									await args.ack();
+								}
+							} catch (err) {
+								this.logger.error('Error acknowledging view_submission: ' + err);
+							}
+							await socketProcess(args);
+						});
+					} else if (filter === 'view_closed') {
+						// listen to view_closed notifications (modal closed). ack might not be required but call if provided.
+						app.view(/.*/, async (args: any) => {
+							// view_closed payloads arrive to the same app.view handler; filter by body?.type or body?.view?.type if needed
+							try {
+								if (typeof args.ack === 'function') {
+									await args.ack();
+								}
+							} catch (err) {
+								// ack may not be required; swallow ack errors but log
+								this.logger.debug('view_closed ack error (safe to ignore): ' + err);
+							}
+							// Only process if the payload type is a view_closed (so we don't double-process view_submission)
+							const bodyType = args?.body?.type;
+							// In some cases the top-level body type for view_closed is 'view_closed' or the view's 'type' may indicate closing
+							// To be robust, process both view_closed and entries that have view and where 'is_cleared' / 'closed' might be present.
+							if (bodyType && bodyType !== 'view_closed') {
+								// if it's not a view_closed payload, skip (this handler is for view_closed only)
+								return;
+							}
+							await socketProcess(args);
+						});
 					} else if (filter.startsWith('message.')) {
 						// Handle message subtypes by filtering on channel_type
 						const channelType = filter.replace('message.', '');
@@ -1006,5 +1063,3 @@ export class SlackSocketTrigger implements INodeType {
 		};
 	}
 }
-
-
